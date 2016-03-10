@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <title>Ethan Steiner - Software Developer living in New York City, NY</title>
+  <meta name="description" content="This is the personal page for Ethan Steiner. Software Developer living in New York City, NY." />
+  <meta name="keywords" content="Portfolio and Blog from Ethan Steiner, Software Developer" />
+  <meta name="author" content="Ethan Steiner">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="main_navigation" class="clearfix">
+    <%= link_to 'Ethan Steiner', root_path, class: "name" %>
+    <nav>
+      <%= link_to 'Articles', posts_path %>
+      <%= link_to 'Projects', projects_path %>
+      <%= link_to 'Contact', new_contact_path %>
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </nav>
+  </header>
+
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
 
 <%= yield %>
 
+<footer id="main_footer">
+  <p class="copyright">&copy;2016 Ethan Steiner</p>
+  <nav>
+    <a href="#"><i class="fa fa-bicycle"></i></a>
+    <a href="#"><i class="fa fa-camera"></i></a>
+    <a href="#"><i class="fa fa-github"></i></a>
+    <a href="#"><i class="fa fa-crosshairs"></i></a>
+    <a href="#"><i class="fa fa-paper-plane"></i></a>
+  </nav>
+</footer>
+
 </body>
+
 </html>

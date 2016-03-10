@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require_tree .
+
+TweenMax.to(".fa fa-bicycle", 2, {left:200});
