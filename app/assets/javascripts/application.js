@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require 'greensock/TweenLite'
+//= require 'greensock/easing/EasePack'
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-TweenMax.to(".fa fa-bicycle", 2, {left:200});

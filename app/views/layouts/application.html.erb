@@ -9,6 +9,7 @@
   <meta name="author" content="Ethan Steiner">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <% javascript_include_tag 'SplitText.js' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -36,12 +37,12 @@
 
 <footer id="main_footer">
   <p class="copyright">&copy;2016 Ethan Steiner</p>
-  <nav>
+  <nav class="footer_icons">
+    <a href="#"><i class="fa fa-paper-plane"></i></a>
+    <a href="#"><i class="fa fa-linkedin-square"></i></a>
+    <a href="#"><i class="fa fa-github"></i></i></a>
     <a href="#"><i class="fa fa-bicycle"></i></a>
     <a href="#"><i class="fa fa-camera"></i></a>
-    <a href="#"><i class="fa fa-github"></i></a>
-    <a href="#"><i class="fa fa-crosshairs"></i></a>
-    <a href="#"><i class="fa fa-paper-plane"></i></a>
   </nav>
 </footer>
 

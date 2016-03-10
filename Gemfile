@@ -26,6 +26,7 @@ gem 'acts_as_commentable'
 gem 'acts_as_follower'
 gem 'counter_culture'
 gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
+gem 'greensock-rails'
 
 gem 'carrierwave'
 gem 'rmagick', require: false
@@ -36,13 +37,14 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'capistrano-rails', group: :development
-
+gem 'figaro'
+gem 'puma'
 group :development do
-  gem 'better_errors'
-  gem 'letter_opener'
-  gem 'guard'
-  gem 'guard-rspec', '~> 4.2.8'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 group :production do
