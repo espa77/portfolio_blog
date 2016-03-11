@@ -6,8 +6,9 @@
 	</header>
 
 	<div id="content">
-		<%= image_tag @post.attachment.url(:medium) %>
-		<%= markdown @post.content %>
+		<% javascript_include_tag Ckeditor.cdn_url %>
+		<%= image_tag @post.attachment.url(:hrect_lg) %>
+		<%= raw(@post.content) %>
 	</div>
 
 	<% if user_signed_in? %>

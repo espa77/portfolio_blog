@@ -23,9 +23,10 @@ gem 'will_paginate'
 gem 'counter_culture'
 gem 'mail_form'
 gem 'greensock-rails'
+gem 'ckeditor'
 
 gem 'carrierwave'
-gem 'rmagick', require: false
+gem 'mini_magick', require: false
 
 group :development, :test do
   gem 'byebug'
