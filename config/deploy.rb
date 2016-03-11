@@ -2,6 +2,7 @@ lock '3.4.0'
 
 server '54.165.195.83', user: 'deploy', roles: %w{web app db}
 
+
 set :application, 'ethansteiner'
 set :repo_url, 'git@github.com:espa77/portfolio_blog.git' # Edit this to match your repository
 set :branch, :master
@@ -12,6 +13,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 5
 set :rvm_type, :user
 set :rvm_ruby_version, 'jruby-1.7.19' # Edit this if you are using MRI Ruby
+set :ssh_options, { user: 'deploy', keys: %w(~/.ssh/personal_blog_portfolio.pem), forward_agent: true }
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
