@@ -16,16 +16,11 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'autoprefixer-rails'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
-gem 'mail_form', '~> 1.5.1'
 gem 'devise'
 gem 'friendly_id'
 gem 'will_paginate'
-gem 'public_activity'
-gem 'acts_as_votable'
-gem 'acts_as_commentable'
-gem 'acts_as_follower'
 gem 'counter_culture'
-gem "aws-ses", "~> 0.6.0", :require => 'aws/ses'
+gem 'mail_form'
 gem 'greensock-rails'
 
 gem 'carrierwave'
@@ -35,16 +30,6 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-end
-
-gem 'figaro'
-gem 'puma'
-group :development do
-  gem 'capistrano'
-  gem 'capistrano3-puma'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
 end
 
 group :production do
