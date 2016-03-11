@@ -26,8 +26,15 @@
 	<br>
 	<br>
 
+	<div id="photo_attachment_container">
+		<%= f.label :attachment %><br>
+		<%= f.file_field :attachment %>
+	</div>
+
+	<br>
+
 	<%= f.submit %>
 
 	<br>
-	
+
 <% end %>

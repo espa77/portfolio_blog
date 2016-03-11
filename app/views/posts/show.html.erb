@@ -6,6 +6,7 @@
 	</header>
 
 	<div id="content">
+		<%= image_tag @post.attachment.url(:medium) %>
 		<%= markdown @post.content %>
 	</div>
 

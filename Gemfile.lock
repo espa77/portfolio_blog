@@ -350,6 +350,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   fog
+  fog-aws
   friendly_id
   greensock-rails
   jbuilder (~> 2.0)
