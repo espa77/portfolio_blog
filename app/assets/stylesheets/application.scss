@@ -143,8 +143,15 @@ hr {
 			color: $dark;
 			margin-left: 1em;
 			padding-top: .2em;
+			-webkit-transition: .5s ease-in-out;
+			-moz-transition: .5s ease-in-out;
+			-o-transition: .5s ease-in-out;
+			transition: .5s ease-in-out;
 			&:hover {
 				color: $highlight;
+				-ms-transform: rotate(-45deg); /* IE 9 */
+				-webkit-transform: rotate(-45deg); /* Safari */
+				transform: rotate(-45deg);
 			}
 		}
 	}
