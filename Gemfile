@@ -15,7 +15,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'autoprefixer-rails'
-gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
 gem 'devise'
 gem 'friendly_id'
@@ -23,7 +22,10 @@ gem 'will_paginate'
 gem 'counter_culture'
 gem 'mail_form'
 gem 'greensock-rails'
-gem 'ckeditor'
+gem 'rest-client'
+gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
+
 
 gem 'carrierwave'
 gem 'mini_magick', require: false

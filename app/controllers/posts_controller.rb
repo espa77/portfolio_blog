@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = Post.all.order("created_at desc").paginate(page: params[:page], per_page: 3)
+		binding.pry
+		@posts = JSON.parse(RestClient.get("https://medium.com/learning-living")).paginate(page: params[:page], per_page: 3)
 	end
 
 	def new
@@ -20,6 +21,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+
 	end
 
 	def edit

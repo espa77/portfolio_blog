@@ -19,8 +19,8 @@
   <header id="main_navigation" class="clearfix">
     <%= link_to 'Ethan Steiner', root_path, class: "name" %>
     <nav>
-      <%= link_to 'Articles', posts_path %>
       <%= link_to 'Projects', projects_path %>
+      <a href="https://medium.com/learning-living">Blog</a>    
       <%= link_to 'Contact', new_contact_path %>
       <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
@@ -41,9 +41,9 @@
   <nav class="footer_icons">
     <a href="/contacts/new"><i class="fa fa-paper-plane"></i></a>
     <a href="https://www.linkedin.com/in/ethansteiner"><i class="fa fa-linkedin-square"></i></a>
-    <a href="https://github.com/espa77"><i class="fa fa-github"></i></i></a>
     <a href="https://vimeo.com/2086946"><i class="fa fa-bicycle"></i></a>
     <a href="https://www.youtube.com/watch?v=nMnMR8qVRUg"><i class="fa fa-crosshairs"></i></a>
+    <a href="https://github.com/espa77"><i class="fa fa-github"></i></i></a>
   </nav>
 </footer>
 
