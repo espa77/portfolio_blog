@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'favicon2.ico' %>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <title>Ethan Steiner - Software Developer living in New York City, NY</title>
@@ -20,7 +20,7 @@
     <%= link_to 'Ethan Steiner', root_path, class: "name" %>
     <nav>
       <%= link_to 'Projects', projects_path %>
-      <a href="https://medium.com/learning-living">Blog</a>    
+      <a href="https://medium.com/learning-living">Blog</a>
       <%= link_to 'Contact', new_contact_path %>
       <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
