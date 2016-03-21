@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		binding.pry
 		@posts = JSON.parse(RestClient.get("https://medium.com/learning-living")).paginate(page: params[:page], per_page: 3)
 	end
 

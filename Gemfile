@@ -25,6 +25,9 @@ gem 'greensock-rails'
 gem 'rest-client'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
+gem 'mechanize'
+gem 'awesome_print'
+gem 'open-uri'
 
 
 gem 'carrierwave'
