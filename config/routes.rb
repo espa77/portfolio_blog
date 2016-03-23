@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :projects
-  resources :posts
   resources :contacts, only: [:new, :create]
   get 'welcome/index'
   root 'welcome#index'
+  get '/paintball' => 'paintball#show'
 
   get '*path' => redirect('/')
 end
