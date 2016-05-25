@@ -1,13 +1,37 @@
 @import 'normalize';
 
-$dark: #424652;
-$white: #FFFFFF;
-$light: #9a9da4;
-$highlight: #8bc6db;
-$border: #E9E9E9;
+$dark: #B22222;
+$white: #FEFEFE;
+$light: #D43D1A;
+$highlight: #FF8C00;
+$border: #E3170D;
+
+@keyframes fade-in {
+    from {opacity:0;}
+    to {opacity: 1;}
+  }
+
+	@-moz-keyframes rotate {
+		0% {-moz-transform: rotate(-2deg); }
+		50% {-moz-transform: rotate(-15deg); }
+		100% { -moz-transform: rotate(0deg); }
+	}
+	@-webkit-keyframes rotate {
+		0% { -webkit-transform: rotate(-2deg); }
+		50% { -webkit-transform: rotate(-15deg); }
+		100% { -webkit-transform: rotate(0deg); }
+	}
+	@keyframes rotate {
+		0% { -webkit-transform: rotate(-2deg); transform:rotate(-2deg); }
+		50% { -webkit-transform: rotate(-15deg); transform:rotate(-15deg); }
+		100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }
+	}
+
 
 * {
 	box-sizing: border-box;
+	background-color: #ededed;
+	color: $dark;
 }
 
 body {
@@ -86,6 +110,10 @@ p, ul, ol {
 	margin: 0 0 1.6em 0;
 }
 
+#intro_text_1, #intro_text_2 {
+	color: $dark
+}
+
 hr {
 	width: 3em;
 	display: block;
@@ -117,6 +145,9 @@ hr {
 			text-decoration: none;
 			margin: 0 1rem;
 			font-size: 1rem;
+			&:hover {
+				color: $highlight;
+			}
 		}
 	}
 }
@@ -139,19 +170,15 @@ hr {
 	}
 	nav {
 		float: right;
-		i {
+		.fa {
 			color: $dark;
 			margin-left: 1em;
 			padding-top: .2em;
-			-webkit-transition: .5s ease-in-out;
-			-moz-transition: .5s ease-in-out;
-			-o-transition: .5s ease-in-out;
-			transition: .5s ease-in-out;
 			&:hover {
 				color: $highlight;
-				-ms-transform: rotate(-10deg); /* IE 9 */
-				-webkit-transform: rotate(-10deg); /* Safari */
-				transform: rotate(-10deg);
+				-webkit-animation:rotate 0.4s linear ;
+		    -moz-animation:rotate 0.4s linear ;
+		    animation:rotate 0.4s linear ;
 			}
 		}
 	}
@@ -216,6 +243,7 @@ input[type="submit"], .button {
 	margin: 4em 0 0 0;
 	text-align: center;
 }
+
 
 @import 'welcome';
 @import 'posts_projects';

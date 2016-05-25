@@ -7,9 +7,14 @@
 	padding: 0 5% 0 2.5%;
 }
 
+.about_title {
+	visibility:hidden;
+}
+
 .col-2, .col-3 {
 	width: 27.5%;
 	padding: 0 2.5%;
+	visibility:hidden;
 }
 
 .homepage_content {
@@ -45,4 +50,9 @@
 		font-weight: 700;
 		text-decoration: none;
 	}
+}
+
+.mobile {
+	width: 100%;
+	padding: 1em;
 }
