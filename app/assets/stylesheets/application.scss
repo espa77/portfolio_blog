@@ -6,27 +6,27 @@ $light: #D43D1A;
 $highlight: #FF8C00;
 $border: #E3170D;
 
-@keyframes fade-in {
-    from {opacity:0;}
-    to {opacity: 1;}
-  }
-
-	@-moz-keyframes rotate {
-		0% {-moz-transform: rotate(-2deg); }
-		50% {-moz-transform: rotate(-15deg); }
-		100% { -moz-transform: rotate(0deg); }
+	@-moz-keyframes pop {
+		0% { -moz-transform: scale(1.1); }
+		25% { -moz-transform: scale(1.4); }
+		50% { -moz-transform: scale(1.6); }
+		90% { -moz-transform: scale(0.8); }
+		100% { -moz-transform: scale(1.1); }
 	}
-	@-webkit-keyframes rotate {
-		0% { -webkit-transform: rotate(-2deg); }
-		50% { -webkit-transform: rotate(-15deg); }
-		100% { -webkit-transform: rotate(0deg); }
+	@-webkit-keyframes pop {
+		0% { -webkit-transform: scale(1.1); }
+		25% { -webkit-transform: scale(1.4); }
+		50% { -webkit-transform: scale(1.6); }
+		90% { -webkit-transform: scale(0.8); }
+		100% { -webkit-transform: scale(1.1); }
 	}
-	@keyframes rotate {
-		0% { -webkit-transform: rotate(-2deg); transform:rotate(-2deg); }
-		50% { -webkit-transform: rotate(-15deg); transform:rotate(-15deg); }
-		100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); }
+	@keyframes pop {
+		0% { -webkit-transform: scale(1.1); transform:scale(1.1); }
+		25% { -webkit-transform: scale(1.4); transform:scale(1.4); }
+		50% { -webkit-transform: scale(1.6); transform:scale(1.6); }
+		90% { -webkit-transform: scale(0.8); transform:scale(0.8); }
+		100% { -webkit-transform: scale(1.1); transform:scale(1.1); }
 	}
-
 
 * {
 	box-sizing: border-box;
@@ -176,9 +176,9 @@ hr {
 			padding-top: .2em;
 			&:hover {
 				color: $highlight;
-				-webkit-animation:rotate 0.4s linear ;
-		    -moz-animation:rotate 0.4s linear ;
-		    animation:rotate 0.4s linear ;
+				-webkit-animation:pop 0.4s linear ;
+		    -moz-animation:pop 0.4s linear ;
+		    animation:pop 0.4s linear ;
 			}
 		}
 	}
