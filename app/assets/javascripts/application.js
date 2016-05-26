@@ -20,15 +20,19 @@
 (function($) {
     var $window = $(window),
         $cols = $('.col-1, .col-2, .col-3'),
+        $hr = $('hr'),
         $wrapper = $('.wrapper_padding');
 
     function resize() {
         if ($window.width() < 801) {
-            return $cols.addClass('mobile'), $wrapper.addClass('mobile');
+            return $cols.addClass('mobile'),
+            $wrapper.addClass('mobile'),
+            $hr.addClass('hr_mobile');
         }
 
         $cols.removeClass('mobile');
         $wrapper.removeClass('mobile');
+        $hr.removeClass('hr_mobile');
     }
 
     $window
