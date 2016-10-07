@@ -1,10 +1,10 @@
 @import 'normalize';
 
-$dark: #B22222;
+$border: #010101;
 $white: #FEFEFE;
-$light: #D43D1A;
-$highlight: #FF8C00;
-$border: #E3170D;
+$light: #8C9EFF;
+$highlight: #E8EAF6;
+$dark: #C5CAE9;
 
 	@-moz-keyframes pop {
 		0% { -moz-transform: scale(1.1); }
@@ -30,7 +30,7 @@ $border: #E3170D;
 
 * {
 	box-sizing: border-box;
-	background-color: #ededed;
+	background-color: #3F51B5;
 	color: $dark;
 }
 

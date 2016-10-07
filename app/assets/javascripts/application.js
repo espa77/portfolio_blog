@@ -95,19 +95,19 @@ TweenMax.staggerFrom(introTextTwo.chars, 1.1,
   },
   0.013, allDone);
 
-TweenMax.from(".col-2", 1.3, {
+TweenMax.from(".col-2", 1, {
   autoAlpha:0,
   opacity:0,
-  scale:1.8,
-  ease:Bounce.easeOut,
+  scale:0.2,
+  ease:SlowMo.easeOut,
   delay:5
 });
 
-TweenMax.from(".col-3", 1.3, {
+TweenMax.from(".col-3", 1, {
   autoAlpha:0,
   opacity:0,
-  scale:1.8,
-  ease:Bounce.easeOut,
+  scale:0.2,
+  ease:SlowMo.easeOut,
   delay:5.2
 });
 
